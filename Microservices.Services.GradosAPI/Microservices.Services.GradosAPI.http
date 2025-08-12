@@ -1,0 +1,6 @@
+@Microservices.Services.GradosAPI_HostAddress = http://localhost:5276
+
+GET {{Microservices.Services.GradosAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

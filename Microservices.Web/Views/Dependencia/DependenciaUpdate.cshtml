@@ -1,0 +1,35 @@
+﻿﻿@using Microservices.Web.Models.Dependencia
+@model DependenciaRegisterDto
+
+<form asp-action="DependenciaUpdate">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-dark text-center">Actualizar Dependencia</h1>
+        <input asp-for="DependenciaId" hidden />
+        <hr />
+        <div class="row">
+      
+            <div class="col-2">
+                <label class="control-label pt-2" style="font-size:20px;">Nombre</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="DependenciaName" class="form-control" />
+                <span asp-validation-for="DependenciaName" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2" style="font-size:20px;">Abreviatura</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="DependenciaAbrev" class="form-control" />
+                <span asp-validation-for="DependenciaAbrev" class="text-danger"></span>
+            </div>
+
+            <div class="col-5 offset-2">
+                <a asp-action="DepedenciaIndex" class="btn-primary btn form-control ">Regresar</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Update" class="btn btn-success form-control" />
+            </div>
+        </div>
+    </div>
+</form>

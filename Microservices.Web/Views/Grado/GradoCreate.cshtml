@@ -1,0 +1,47 @@
+﻿
+@using Microservices.Web.Models.Grado
+@model GradoRegisterDto
+
+<form asp-action="GradoCreate">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-dark text-center">Creación de Grados </h1>
+
+        <hr />
+        <div class="row">
+            <div class="col-2">
+                <label class="control-label pt-2" style="font-size:20px;"> Código de Grado</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="GradoCode" class="form-control" />
+                <span asp-validation-for="GradoCode" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2" style="font-size:20px;">Descripción</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="GradoName" class="form-control" />
+                <span asp-validation-for="GradoName" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2" style="font-size:20px;">Abreviatura</label>
+            </div>
+            <div class="col-10 pb-3">
+                <input asp-for="GradoAbrev" class="form-control" />
+                <span asp-validation-for="GradoAbrev" class="text-danger"></span>
+            </div>
+
+            <div class="col-5 offset-2">
+                <a asp-action="GradoIndex" class="btn-primary btn form-control">Regresar</a>
+            </div>
+            <div class="col-5">
+                <input type="submit" value="Crear" class="btn btn-success form-control" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
